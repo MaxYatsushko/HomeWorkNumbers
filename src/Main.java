@@ -5,6 +5,9 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
+        task7();
+        task8();
     }
     public static void task1(){
 
@@ -60,13 +63,15 @@ public class Main {
     public static void task4(){
 
         byte performanceBottles = 8;//за 1 мин
-        byte numberMin = 20, numberDay = 1, numberDay2 = 3, numberMonth = 1;
+        byte numberMin = 20, numberDay = 1, numberMonth = 1;
 
 
         System.out.println("Демонстрация задачи4");
         System.out.println("За " + numberMin + " минут машина произвела " + performanceBottles * numberMin + " штук бутылок");
         System.out.println("За " + numberDay + " день машина произвела " + performanceBottles * numberDay * 86400 + " штук бутылок");
-        System.out.println("За " + numberDay2 + " дней машина произвела " + performanceBottles * numberDay2 * 86400 + " штук бутылок");
+
+        numberDay *= 3;
+        System.out.println("За " + numberDay + " дней машина произвела " + performanceBottles * numberDay * 86400 + " штук бутылок");
         System.out.println("За " + numberMonth + " месяц машина произвела " + performanceBottles * numberMonth * 86400 * 30 + " штук бутылок");
     }
 
@@ -79,6 +84,48 @@ public class Main {
 
         System.out.println("Демонстрация задачи5");
         System.out.println("В школе, где " + numberClass + " классов, нужно " + numberClass * numberTinPaintWhite + " банок белой краски и " + numberClass * numberTinPaintBrown + " банок коричневой краски");
+    }
+
+    public static void task6(){
+
+        byte banana = 5, milk = 2, iceCream = 2, egg = 4;
+        byte bananaWeight = 80, milkWeight = 105, iceCreamWeight = 100, eggWeight = 70;
+
+        int totalWeight = banana * bananaWeight + milk * milkWeight + iceCream * iceCreamWeight + egg * eggWeight;
+
+
+        System.out.println("Демонстрация задачи6");
+        System.out.println("Вес спортзавтрака составляет " + totalWeight + " грамм или " + totalWeight / 1000 + " кг и " + totalWeight % 1000 + " грамм");
+    }
+
+    public static void task7(){
+
+        int decWeight = 250, goalWeight = 7000, numberDays;
+
+        System.out.println("Демонстрация задачи7");
+        numberDays = goalWeight / decWeight;
+        System.out.println("Для похудения  на " + goalWeight / 1000 + " кг если терять каждый день по " + decWeight + " грамм понадобится " + numberDays + " дней");
+
+        decWeight = 500;
+        numberDays = goalWeight /decWeight;
+        System.out.println("Для похудения  на " + goalWeight / 1000 + " кг если терять каждый день по " + decWeight + " грамм понадобится " + numberDays + " дней");
+
+    }
+
+    public static void task8(){
+
+        int salaryMasha = 67760, salaryDenis = 83690, salaryKris = 76230;
+        float incSalary = 1.1f;//10%
+
+        int yearSalaryMasha = salaryMasha * 12, yearSalaryDenis = salaryDenis * 12, yearsalaryKris = salaryKris * 12;
+        float newSalaryMasha = salaryMasha * incSalary, newSalaryDenis = salaryDenis * incSalary, newSalaryKris = salaryKris * incSalary;
+        float newYearSalaryMasha = newSalaryMasha * 12,  newYearSalaryDenis = newSalaryDenis * 12, newYearSalaryKris = newSalaryKris * 12;
+
+        System.out.println("Демонстрация задачи8");
+        System.out.println("Изменения зарплат после повышния будет следующим:");
+        System.out.println("- Маша за месяц получит: " + newSalaryMasha + ", что за год составит " + newYearSalaryMasha + ", это на " + (newYearSalaryMasha - yearSalaryMasha) + " больше, ранее зарплата за год была " + yearSalaryMasha);
+        System.out.println("- Денис за месяц получит: " + newSalaryDenis + ", что за год составит " + newYearSalaryDenis + ", это на " + (newYearSalaryDenis - yearSalaryDenis) + " больше, ранее зарплата за год была " + yearSalaryDenis);
+        System.out.println("- Кристина за месяц получит: " + newSalaryKris + ", что за год составит " + newYearSalaryKris + ", это на " + (newYearSalaryKris - yearsalaryKris) + " больше, ранее зарплата за год была " + yearsalaryKris);
     }
 
 }
